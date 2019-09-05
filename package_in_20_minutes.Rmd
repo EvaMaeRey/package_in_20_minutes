@@ -22,15 +22,15 @@ Recently, several R packages have made creating *new* R packages --- with all th
 
 
 - [**usethis**](https://CRAN.R-project.org/package=usethis){target="_blank"}: Automate Package
-  and Project Setup. R package version 1.5.1. Hadley Wickham and Jennifer Bryan (2019).
+  and Project Setup. Hadley Wickham and Jennifer Bryan (2019).
 
 - [**devtools**](https://CRAN.R-project.org/package=devtools){target="_blank"}: Tools
-  to Make Developing R Packages Easier. R package version 2.1.0. Hadley Wickham, Jim Hester and Winston Chang (2019). 
+  to Make Developing R Packages Easier. Hadley Wickham, Jim Hester and Winston Chang (2019). 
   
 
 
 - [**roxygen2**](https://CRAN.R-project.org/package=roxygen2){target="_blank"}: 
-  In-Line Documentation for R. R package version 6.1.1. Hadley Wickham, Peter Danenberg and Manuel Eugster (2018).
+  In-Line Documentation for R. Hadley Wickham, Peter Danenberg and Manuel Eugster (2018).
   
 
 
