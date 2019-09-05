@@ -1,5 +1,5 @@
 ---
-title: "A companion guide to Jim Hester's presentation, 'You can make an R package in 20 minutes'"
+title: "A companion guide to Jim Hester's, 'You can make an R package in 20 minutes'"
 author: "Gina Reynolds"
 date: "8/29/2019"
 output: 
@@ -18,7 +18,7 @@ output:
 
 <!-- *Me:*  Yes, yes I do.   -->
 
-Recently, several R packages have made creating *new* R packages --- with all the required architecture and implementing best practices --- much easier.  Nevertheless, there is quite a lot to learn to make use of them.  There are a number of excellent guides, and one is by Jim Hester, which is a video presentation recorded at the RStudio 2018 conference.  I like the video format and the title is enticing:  "Make an R package in 20 minutes."  In fact, the build is closer to 12 minutes, as Jim takes some time to motivate the talk.  In the end the pace is really pretty fast.  This "companion guide" collects the steps for reference.  
+Recently, several R packages have made creating *new* R packages --- with all the required architecture and implementing best practices --- much easier.  Nevertheless, there is quite a lot to learn to make use of them.  There are a number of excellent guides, and [one is by Jim Hester](https://www.rstudio.com/resources/videos/you-can-make-a-package-in-20-minutes/){target="_blank"}, which is a *video* presentation recorded at the RStudio 2018 conference.  I like the video format and the title is enticing:  "Make an R package in 20 minutes."  In fact, the build is closer to 12 minutes, as Jim takes some time to motivate the talk.  In the end the pace is really pretty fast.  This "companion guide" collects the steps for reference.  
 
 In truth, creating your *first* R package will probably take more than twenty minutes.  You might need to pause and rewind the video several times.   You'll probably stop and mull over what has been created for you when using the various helpful functions.  You might even scrap a first attempt and begin again from scratch.  But the ability to reuse your work and share your work in an accessible format is so exciting, isn't it?  Let's begin!  
 
@@ -146,7 +146,7 @@ So now you have an R script in your package directory:
 ```
 
 
-## Step 4: Make the package "active" *and test your functions interactively*
+## Step 4: Make the package "active" *and test your functions interactively with devtools::load_all()*
 
 Then make the package active using devtools::load_all() in 
 
@@ -167,13 +167,13 @@ Let's see if there are any problems in this package.
 devtools::check()
 ```
 
-Uh-oh! You will warnings!
+Uh-oh! You will see warnings!  They relate specifying dependencies which we'll address below.
 
 
-## Step 6:  Add needed dependencies *using usethis::use_package("package_name")*
+## Step 6:  Add needed dependencies 
 
 
-### Step 6a.
+### Step 6a. Declare dependencies *using usethis::use_package("package_name")*
 
 It is not good practice to use library() or require() to use functions from other package.  Instead we first declare dependencies.  Using the function usethis::use_package will add dependencies to your DESCRIPTION file. 
 
@@ -203,7 +203,7 @@ Imports:
 ```
 
 
-### Step 6b: Add dependencies and export functions in R script *using "#' @" notation*
+### Step 6b: Add dependencies and export functions in R script *using "#' @importFrom and #' @export"*
 
 Now, in the R script, we indicate import from other packages --- and what functions may be exported.  
 
@@ -222,11 +222,11 @@ print.note <- function(x, ...) {
 ```
 
 
-## Step 7: Documentation these additions *using Roxygen*
+## Step 7: Document these additions *using a 'Roxygen' skeleton*
 
 Highlight the name of the function ('note') you want to document.
 
-Then, in the menu go to:
+Then, in RStudio the menu go to:
 
 **code -> Insert Roxygen skeleton**
 
@@ -309,7 +309,7 @@ You'll notice the this creates a new subdirectory (man) and documents related to
 
 
 
-## Repeat Step 5  *devtools::check()*
+## Repeat Step 5 *devtools::check()*
 
 Again check you package.  You might do this often when you are creating your own package. 
 
@@ -319,7 +319,7 @@ devtools::check()
 
 
 
-## Step 9:  Create a readme file with *usethis::use_readme_md()*
+## Step 9:  Create a readme file *with usethis::use_readme_md()*
 
 
 Help your users understand the package with a readme.  
@@ -348,7 +348,7 @@ You'll now see README.md among your files, which you can open and edit.
 
 
 
-## Step 10: Create some relevent tests with *usethis::use_test()*
+## Step 10: Create some relevent tests *with usethis::use_test()*
 
 
 Creates testing infrastructure.  Think of some things that should be true with given inputs in a function.  Use the testthat::test_that() f
@@ -431,7 +431,7 @@ usethis::use_github()
 But instead, I use the github instructions [here]( https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line).
 
 
-# Step 14: Tell the world how to get your package!
+# Step 14: Tell the world how to get your package *with devtools::install_github()*
 
 Now you can let your friends know where your package "lives".  And people can install your package with devtools::install_github, and "githubusername/packagename".  This can be part of your readme.  If you don't submit to cran right away, you might direct people to install with the development version using devtools::install_github.
 
@@ -444,11 +444,11 @@ devtools::install_github("EvaMaeRey/note")
 
 ---
 
-# More topics
+# More topics you might consider investigating:
 
-What is travis?
-What about the coverage report?
-What about use_rcpp?
+- What is travis?
+- What about the coverage report?
+- What about use_rcpp?
 
 
 ``` r
@@ -457,7 +457,7 @@ usethis::use_coverage()
 usethis::use_rcpp()
 ```
 
-A good starting point for these topics is the resources listed below.
+A good starting point for these topics are the resources listed below.
 
 ---
 
