@@ -18,7 +18,26 @@ output:
 
 <!-- *Me:*  Yes, yes I do.   -->
 
-Recently, several R packages have made creating *new* R packages --- with all the required architecture and implementing best practices --- much easier.  Nevertheless, there is quite a lot to learn to make use of them.  There are a number of excellent guides, and [one is by Jim Hester](https://www.rstudio.com/resources/videos/you-can-make-a-package-in-20-minutes/){target="_blank"}, which is a *video* presentation recorded at the RStudio 2018 conference.  I like the video format and the title is enticing:  "Make an R package in 20 minutes."  In fact, the build is closer to 12 minutes, as Jim takes some time to motivate the talk.  In the end the pace is really pretty fast.  This "companion guide" collects the steps for reference.  
+Recently, several R packages have made creating *new* R packages --- with all the required architecture and implementing best practices --- much easier. They include:
+
+
+- [**usethis**](https://CRAN.R-project.org/package=usethis){target="_blank"}: Automate Package
+  and Project Setup. R package version 1.5.1. Hadley Wickham and Jennifer Bryan (2019).
+
+- [**devtools**](https://CRAN.R-project.org/package=devtools){target="_blank"}: Tools
+  to Make Developing R Packages Easier. R package version 2.1.0. Hadley Wickham, Jim Hester and Winston Chang (2019). 
+  
+
+
+- [**roxygen2**](https://CRAN.R-project.org/package=roxygen2){target="_blank"}: 
+  In-Line Documentation for R. R package version 6.1.1. Hadley Wickham, Peter Danenberg and Manuel Eugster (2018).
+  
+
+
+
+
+
+Nevertheless, there is quite a lot to learn to make use of them.  There are a number of excellent guides, and [one is by Jim Hester](https://www.rstudio.com/resources/videos/you-can-make-a-package-in-20-minutes/){target="_blank"}, which is a *video* presentation recorded at the RStudio 2018 conference.  I like the video format and the title is enticing:  "Make an R package in 20 minutes."  In fact, the build is closer to 12 minutes, as Jim takes some time to motivate the talk.  In the end the pace is really pretty fast.  This "companion guide" collects the steps for reference.  
 
 In truth, creating your *first* R package will probably take more than twenty minutes.  You might need to pause and rewind the video several times.   You'll probably stop and mull over what has been created for you when using the various helpful functions.  You might even scrap a first attempt and begin again from scratch.  But the ability to reuse your work and share your work in an accessible format is so exciting, isn't it?  Let's begin!  
 
@@ -471,12 +490,29 @@ Some great additional resources are the following:
 - [Hillary Parker's *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/){target="_blank"}
 - [Karl Browman's *R package primer*](https://kbroman.org/pkg_primer/){target="_blank"}
 
+# Additional tools used to create this guide
 
-<!-- ```{r} -->
-<!-- citation(package = c("base")) -->
-<!-- citation(package = c("usethis")) -->
-<!-- citation(package = c("devtools")) -->
-<!-- citation(package = c("fs")) -->
-<!-- citation(package = c("roxygen2")) -->
-<!-- ``` -->
+
+
+  R Core Team (2019). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  URL https://www.R-project.org/.
+
+  Jim Hester and Hadley Wickham (2019). fs: Cross-Platform File System
+  Operations Based on 'libuv'. R package version 1.3.1.
+  https://CRAN.R-project.org/package=fs
+
+  JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and
+  Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston
+  Chang and Richard Iannone (2019). rmarkdown: Dynamic Documents for R. R
+  package version 1.14. URL https://rmarkdown.rstudio.com.
+
+  Yihui Xie and J.J. Allaire and Garrett Grolemund (2018). R Markdown: The
+  Definitive Guide. Chapman and Hall/CRC. ISBN 9781138359338. URL
+  https://bookdown.org/yihui/rmarkdown.
+
+
+
+
+
 

@@ -398,6 +398,7 @@ summary {
 <li><a href="#step-14-tell-the-world-how-to-get-your-package-with-devtoolsinstall_github">Step 14: Tell the world how to get your package <em>with devtools::install_github()</em></a></li>
 <li><a href="#more-topics-you-might-consider-investigating">More topics you might consider investigating:</a></li>
 <li><a href="#additional-resources">Additional Resources</a></li>
+<li><a href="#additional-tools-used-to-create-this-guide">Additional tools used to create this guide</a></li>
 </ul>
 </div>
 
@@ -406,7 +407,13 @@ summary {
 <h2>Introduction</h2>
 <!-- *RStats community:*  Want to build an R package?   -->
 <!-- *Me:*  Yes, yes I do.   -->
-<p>Recently, several R packages have made creating <em>new</em> R packages — with all the required architecture and implementing best practices — much easier. Nevertheless, there is quite a lot to learn to make use of them. There are a number of excellent guides, and <a href="https://www.rstudio.com/resources/videos/you-can-make-a-package-in-20-minutes/" target="_blank">one is by Jim Hester</a>, which is a <em>video</em> presentation recorded at the RStudio 2018 conference. I like the video format and the title is enticing: “Make an R package in 20 minutes.” In fact, the build is closer to 12 minutes, as Jim takes some time to motivate the talk. In the end the pace is really pretty fast. This “companion guide” collects the steps for reference.</p>
+<p>Recently, several R packages have made creating <em>new</em> R packages — with all the required architecture and implementing best practices — much easier. They include:</p>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=usethis" target="_blank"><strong>usethis</strong></a>: Automate Package and Project Setup. R package version 1.5.1. Hadley Wickham and Jennifer Bryan (2019).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=devtools" target="_blank"><strong>devtools</strong></a>: Tools to Make Developing R Packages Easier. R package version 2.1.0. Hadley Wickham, Jim Hester and Winston Chang (2019).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=roxygen2" target="_blank"><strong>roxygen2</strong></a>: In-Line Documentation for R. R package version 6.1.1. Hadley Wickham, Peter Danenberg and Manuel Eugster (2018).</p></li>
+</ul>
+<p>Nevertheless, there is quite a lot to learn to make use of them. There are a number of excellent guides, and <a href="https://www.rstudio.com/resources/videos/you-can-make-a-package-in-20-minutes/" target="_blank">one is by Jim Hester</a>, which is a <em>video</em> presentation recorded at the RStudio 2018 conference. I like the video format and the title is enticing: “Make an R package in 20 minutes.” In fact, the build is closer to 12 minutes, as Jim takes some time to motivate the talk. In the end the pace is really pretty fast. This “companion guide” collects the steps for reference.</p>
 <p>In truth, creating your <em>first</em> R package will probably take more than twenty minutes. You might need to pause and rewind the video several times. You’ll probably stop and mull over what has been created for you when using the various helpful functions. You might even scrap a first attempt and begin again from scratch. But the ability to reuse your work and share your work in an accessible format is so exciting, isn’t it? Let’s begin!</p>
 </div>
 <div id="step-00-press-play-on-the-video-guide" class="section level2">
@@ -724,13 +731,13 @@ usethis::use_rcpp()</code></pre>
 <li><a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/" target="_blank">Hillary Parker’s <em>Writing an R package from scratch</em></a></li>
 <li><a href="https://kbroman.org/pkg_primer/" target="_blank">Karl Browman’s <em>R package primer</em></a></li>
 </ul>
-<!-- ```{r} -->
-<!-- citation(package = c("base")) -->
-<!-- citation(package = c("usethis")) -->
-<!-- citation(package = c("devtools")) -->
-<!-- citation(package = c("fs")) -->
-<!-- citation(package = c("roxygen2")) -->
-<!-- ``` -->
+</div>
+<div id="additional-tools-used-to-create-this-guide" class="section level1">
+<h1>Additional tools used to create this guide</h1>
+<p>R Core Team (2019). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+<p>Jim Hester and Hadley Wickham (2019). fs: Cross-Platform File System Operations Based on ‘libuv’. R package version 1.3.1. <a href="https://CRAN.R-project.org/package=fs" class="uri">https://CRAN.R-project.org/package=fs</a></p>
+<p>JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone (2019). rmarkdown: Dynamic Documents for R. R package version 1.14. URL <a href="https://rmarkdown.rstudio.com" class="uri">https://rmarkdown.rstudio.com</a>.</p>
+<p>Yihui Xie and J.J. Allaire and Garrett Grolemund (2018). R Markdown: The Definitive Guide. Chapman and Hall/CRC. ISBN 9781138359338. URL <a href="https://bookdown.org/yihui/rmarkdown" class="uri">https://bookdown.org/yihui/rmarkdown</a>.</p>
 </div>
 
 
