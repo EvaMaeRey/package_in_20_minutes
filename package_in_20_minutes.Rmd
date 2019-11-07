@@ -37,13 +37,13 @@ Recently, several R packages have made creating *new* R packages --- with all th
 
 
 
-Nevertheless, there is quite a lot to learn to make use of them.  There are a number of excellent guides, and [one is by Jim Hester](https://www.rstudio.com/resources/videos/you-can-make-a-package-in-20-minutes/){target="_blank"}, which is a *video* presentation recorded at the RStudio 2018 conference.  I like the video format and the title is enticing:  "Make an R package in 20 minutes."  In fact, the build is closer to 12 minutes, as Jim takes some time to motivate the talk.  In the end the pace is really pretty fast.  This "companion guide" collects the steps for reference.  
+Nevertheless, there is quite a lot to learn to make use of them.  There are a number of excellent guides, and [one is by Jim Hester](https://resources.rstudio.com/rstudio-conf-2018/you-can-make-a-package-in-20-minutes-jim-hester){target="_blank"}, which is a *video* presentation recorded at the RStudio 2018 conference.  I like the video format and the title is enticing:  "Make an R package in 20 minutes."  In fact, the build is closer to 12 minutes, as Jim takes some time to motivate the talk.  In the end the pace is really pretty fast.  This "companion guide" collects the steps for reference.  
 
 In truth, creating your *first* R package will probably take more than twenty minutes.  You might need to pause and rewind the video several times.   You'll probably stop and mull over what has been created for you when using the various helpful functions.  You might even scrap a first attempt and begin again from scratch.  But the ability to reuse your work and share your work in an accessible format is so exciting, isn't it?  Let's begin!  
 
 ## Step 00: Press play *on the video guide*
 
-Your video guide is [here](https://www.rstudio.com/resources/videos/you-can-make-a-package-in-20-minutes/){target="_blank"}; the package build starts at about minute 8.   
+Your video guide is [here](https://resources.rstudio.com/rstudio-conf-2018/you-can-make-a-package-in-20-minutes-jim-hester){target="_blank"}; the package build starts at about minute 8.   
 
 
 ## Step 0: Have some functions that you'd like to package up *like the below from Hester's 'note' example*
