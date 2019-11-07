@@ -165,6 +165,18 @@ So now you have an R script in your package directory:
 ```
 
 
+**Protip:**  *You can have multiple .R scripts in your R folder that contain package functions. The files in R/ directory are built in alphabetic order by default. But if you have dependencies in your R scripts you may need to change this order, and for that you can use the @include roxygen2 tag.*
+
+Something like this at the top of the script that requires functions from another .R file. 
+
+``` r
+#' @include class-a.R
+setClass("B", contains = "A")
+```
+
+See http://r-pkgs.had.co.nz/man.html for more detail!  
+
+
 ## Step 4: Make the package "active" *and test your functions interactively with devtools::load_all()*
 
 Then make the package active using devtools::load_all() in 
@@ -478,15 +490,13 @@ usethis::use_rcpp()
 
 A good starting point for these topics are the resources listed below.
 
----
-
 # Additional Resources
 
 Some great additional resources are the following:
 
 - [GitHub repository for Jim Hester's presentation](https://github.com/jimhester/presentations/tree/master/2018_02_03-You-can-make-a-package-in-20-minutes#readme){target="_blank"}
 - [The Note Package I created on Github based on the presentation](https://github.com/EvaMaeRey/note)
-- [Hadley Wickham's *R Packages: Chapter II 'The Whole Game'* ](https://r-pkgs.org/whole-game.html){target="_blank"}
+- [Hadley Wickham and Jennifer Bryan's *R Packages: Chapter II 'The Whole Game'* ](https://r-pkgs.org/whole-game.html){target="_blank"}
 - [Hillary Parker's *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/){target="_blank"}
 - [Karl Browman's *R package primer*](https://kbroman.org/pkg_primer/){target="_blank"}
 

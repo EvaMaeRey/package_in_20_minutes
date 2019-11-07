@@ -515,6 +515,11 @@ LazyData: true</code></pre>
 ├── R
 │   └── note.R           &lt;- what you added
 └── note.Rproj</code></pre>
+<p><strong>Protip:</strong> <em>You can have multiple .R scripts in your R folder that contain package functions. The files in R/ directory are built in alphabetic order by default. But if you have dependencies in your R scripts you may need to change this order, and for that you can use the <span class="citation">@include</span> roxygen2 tag.</em></p>
+<p>Something like this at the top of the script that requires functions from another .R file.</p>
+<pre class="r"><code>#&#39; @include class-a.R
+setClass(&quot;B&quot;, contains = &quot;A&quot;)</code></pre>
+<p>See <a href="http://r-pkgs.had.co.nz/man.html" class="uri">http://r-pkgs.had.co.nz/man.html</a> for more detail!</p>
 </div>
 <div id="step-4-make-the-package-active-and-test-your-functions-interactively-with-devtoolsload_all" class="section level2">
 <h2>Step 4: Make the package “active” <em>and test your functions interactively with devtools::load_all()</em></h2>
@@ -719,7 +724,6 @@ note &lt;- function(note, length = 1, octave = 0, volume = default_volume) {
 usethis::use_coverage()
 usethis::use_rcpp()</code></pre>
 <p>A good starting point for these topics are the resources listed below.</p>
-<hr />
 </div>
 <div id="additional-resources" class="section level1">
 <h1>Additional Resources</h1>
@@ -727,7 +731,7 @@ usethis::use_rcpp()</code></pre>
 <ul>
 <li><a href="https://github.com/jimhester/presentations/tree/master/2018_02_03-You-can-make-a-package-in-20-minutes#readme" target="_blank">GitHub repository for Jim Hester’s presentation</a></li>
 <li><a href="https://github.com/EvaMaeRey/note">The Note Package I created on Github based on the presentation</a></li>
-<li><a href="https://r-pkgs.org/whole-game.html" target="_blank">Hadley Wickham’s <em>R Packages: Chapter II ‘The Whole Game’</em></a></li>
+<li><a href="https://r-pkgs.org/whole-game.html" target="_blank">Hadley Wickham and Jennifer Bryan’s <em>R Packages: Chapter II ‘The Whole Game’</em></a></li>
 <li><a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/" target="_blank">Hillary Parker’s <em>Writing an R package from scratch</em></a></li>
 <li><a href="https://kbroman.org/pkg_primer/" target="_blank">Karl Browman’s <em>R package primer</em></a></li>
 </ul>
